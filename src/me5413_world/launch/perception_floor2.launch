@@ -1,0 +1,14 @@
+<launch>
+  <node pkg="me5413_world"
+        type="perception_floor2.py"
+        name="perception_floor2"
+        output="screen">
+    <param name="records_topic" value="/percep/numbers"/>
+    <param name="current_seen_digit_topic" value="/percep/current_seen_digit"/>
+    <param name="enter_room_topic" value="/second_floor/enter_room"/>
+    <param name="enter_trigger_topic" value="/second_floor/enter_room_trigger"/>
+    <param name="allow_tie" value="true"/>
+    <param name="same_digit_cooldown" value="2.0"/>
+    <param name="ignore_zero_count" value="true"/>
+  </node>
+</launch>

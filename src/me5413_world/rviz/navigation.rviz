@@ -280,8 +280,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 22.144243240356445
-            Min Value: 2.274038076400757
+            Max Value: 22.56001853942871
+            Min Value: 2.385956048965454
             Value: true
           Axis: X
           Channel Name: intensity
@@ -359,9 +359,7 @@ Visualization Manager:
             Image: true
             InteractiveMarkers: true
             Localization:
-              AMCL PoseArray: true
-              AMCL PoseWithCovariance: true
-              Map: true
+              "": true
               Value: true
             Planning:
               Foot Print: true
@@ -535,12 +533,12 @@ Visualization Manager:
           Class: rviz/Map
           Color Scheme: map
           Draw Behind: false
-          Enabled: false
+          Enabled: true
           Name: Global CostMap
           Topic: /move_base/global_costmap/costmap
           Unreliable: false
           Use Timestamp: false
-          Value: false
+          Value: true
         - Alpha: 0.699999988079071
           Class: rviz/Map
           Color Scheme: map
@@ -767,7 +765,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 24.60394287109375
+      Distance: 54.391483306884766
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -775,9 +773,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 13.337543487548828
-        Y: 3.2546422481536865
-        Z: 9.5367431640625e-06
+        X: -8.48712158203125
+        Y: -8.757367134094238
+        Z: 1.3703689546673559e-05
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
@@ -785,7 +783,7 @@ Visualization Manager:
       Near Clip Distance: 0.009999999776482582
       Pitch: 1.5697963237762451
       Target Frame: base_link
-      Yaw: 5.847213268280029
+      Yaw: 2.489028215408325
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 4

@@ -17,10 +17,10 @@ TebLocalPlannerROS:
   publish_feedback: false
 
   # Robot
-  max_vel_x: 0.4
-  max_vel_x_backwards: 0.15
-  max_vel_theta: 1.0
-  acc_lim_x: 0.8
+  max_vel_x: 2
+  max_vel_x_backwards: 0.5
+  max_vel_theta: 2
+  acc_lim_x: 1
   acc_lim_theta: 1.5
   min_turning_radius: 0.0
   wheelbase: 0.0
@@ -35,7 +35,7 @@ TebLocalPlannerROS:
   free_goal_vel: false
 
   # Obstacles
-  min_obstacle_dist: 0.20
+  min_obstacle_dist: 0.2
   inflation_dist: 0.35
   include_costmap_obstacles: true
   costmap_obstacles_behind_robot_dist: 1.0

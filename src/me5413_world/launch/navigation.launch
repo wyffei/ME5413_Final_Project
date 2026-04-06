@@ -4,7 +4,7 @@
   <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="mbot_teleop.py" output="screen" respawn="true"/>
 
   <!-- Run the map server -->
-  <arg name="map_file" default="$(find me5413_world)/maps/world_map.yaml"/>
+  <arg name="map_file" default="$(find me5413_world)/maps/world_map_aft.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
   
   <!-- Launch the AMCL Localizer -->
@@ -17,7 +17,20 @@
   <include file="$(find me5413_navigation)/launch/slope_mode_controller.launch" />
 
   <!-- Launch vision -->
-  <include file="$(find me5413_world)/launch/perception.launch" />
+  <!-- Perception: 一楼 box_counter（启动时自动调用） -->
+  <include file="$(find me5413_world)/launch/box_counter_perception.launch"/>
+
+  <!-- Perception Switcher：监听 cone trigger，自动切换到二楼感知 -->
+  <!-- 检测到 /cmd_unblock 后：kill box_counter_perception → launch perception_floor2 -->
+  <node pkg="me5413_world"
+        type="perception_switcher.py"
+        name="perception_switcher"
+        output="screen">
+    <param name="cone_trigger_topic"    value="/cmd_unblock" />
+    <param name="box_counter_node_name" value="/box_counter_perception" />
+    <param name="floor2_package"        value="me5413_world" />
+    <param name="floor2_launch"         value="perception_floor2.launch" />
+  </node>
 
   <!-- Launch line -->
   <include file="$(find me5413_navigation)/launch/patrol_navigation.launch" />

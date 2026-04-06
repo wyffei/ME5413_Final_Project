@@ -29,4 +29,10 @@
     <!-- Load the destination configuration -->
     <rosparam command="load" file="$(find me5413_world)/config/config.yaml" />
 
+      <!-- 启动时自动发布 respawn_objects 命令 (-1 表示发布一次后自动退出该节点) -->
+    <node pkg="rostopic" type="rostopic" name="respawn_objects_pub" 
+            args="pub -1 /rviz_panel/respawn_objects std_msgs/Int16 1" 
+            output="screen" />
+
+
 </launch>

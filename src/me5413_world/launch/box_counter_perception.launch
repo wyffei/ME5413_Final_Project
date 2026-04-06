@@ -61,15 +61,11 @@
     <param name="cone_trigger_topic" value="/cmd_unblock" />
     
     <!-- 建议回调到 1.2m，确保机器人停下时一定包在这个触发射程内 -->
-    <param name="cone_trigger_distance" value="1.6" />
+    <param name="cone_trigger_distance" value="1.2" />
     
     <!-- 触发冷却时间，避免狂发 -->
     <param name="cone_trigger_cooldown" value="2.0" />
   </node>
 
-  <!-- 启动时自动发布 respawn_objects 命令 (-1 表示发布一次后自动退出该节点) -->
-  <node pkg="rostopic" type="rostopic" name="respawn_objects_pub" 
-        args="pub -1 /rviz_panel/respawn_objects std_msgs/Int16 1" 
-        output="screen" />
 
 </launch>
