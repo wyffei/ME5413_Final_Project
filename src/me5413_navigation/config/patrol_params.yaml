@@ -30,4 +30,3 @@ waypoints:
   - {name: "p6", x: 3.393364906311035, y: -0.4712791442871094, yaw: 0, tolerance: 3.14, required: false, timeout: 30.0}
   - {name: "p7", x: 12.762818336486816, y: -4.357191848754883, yaw: -0.0737, tolerance: 3.14, required: false, timeout: 30.0}
   - {name: "p8", x: 30.396047592163086, y: -4.341438293457031, yaw: 0, tolerance: 3.14, required: false, timeout: 30.0}
-
